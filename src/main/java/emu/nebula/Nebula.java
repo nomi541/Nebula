@@ -1,20 +1,12 @@
 package emu.nebula;
 
-import java.io.*;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Map;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
 import emu.nebula.command.CommandManager;
 import emu.nebula.data.ResourceLoader;
 import emu.nebula.database.DatabaseManager;
 import emu.nebula.game.GameContext;
+import emu.nebula.game.gacha.GachaDataMigration;
 import emu.nebula.net.PacketHelper;
 import emu.nebula.plugin.PluginManager;
 import emu.nebula.server.HttpServer;
@@ -22,6 +14,13 @@ import emu.nebula.util.AeadHelper;
 import emu.nebula.util.Handbook;
 import emu.nebula.util.JsonUtils;
 import lombok.Getter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Map;
 
 public class Nebula {
     private static final Logger log = LoggerFactory.getLogger(Nebula.class);
@@ -48,20 +47,23 @@ public class Nebula {
     
     public static void main(String[] args) {
         // Start Server
-        Nebula.getLogger().info("Starting Nebula " + getJarVersion());
-        Nebula.getLogger().info("Git hash: " + getGitHash());
+        Nebula.getLogger().info("Starting Nebula {}", getJarVersion());
+        Nebula.getLogger().info("Git hash: {}", getGitHash());
 
         // Create data directory if it doesn't exist yet
         if (!dataDir.exists()) {
-            dataDir.mkdirs();
+            boolean mkDataDirResult = dataDir.mkdirs();
+            if (!mkDataDirResult) {
+                Nebula.getLogger().error("Failed to create data directory {}", dataDir.getAbsolutePath());
+            }
         }
-        
+
         // Load config and data versions first
         Nebula.loadConfig();
         Nebula.loadDataVersions();
         
         // Output game version
-        Nebula.getLogger().info("Game version: " + GameConstants.getGameVersion());
+        Nebula.getLogger().info("Game version: {}", GameConstants.getGameVersion());
         
         // Load keys
         AeadHelper.loadKeys();
@@ -91,7 +93,7 @@ public class Nebula {
                 case "-database":
                     // Database only
                     DatabaseManager.startInternalMongoServer(Nebula.getConfig().getInternalMongoServer());
-                    Nebula.getLogger().info("Running local Mongo server at " + DatabaseManager.getServer().getConnectionString());
+                    Nebula.getLogger().info("Running local Mongo server at {}", DatabaseManager.getServer().getConnectionString());
                     return;
             }
         }
@@ -113,6 +115,10 @@ public class Nebula {
             Nebula.initDatabases();
         } catch (Exception exception) {
             Nebula.getLogger().error("Unable to start the database(s).", exception);
+        }
+
+        if (serverType.runGame() && Nebula.getGameDatabase() != null) {
+            GachaDataMigration.run();
         }
         
         // Start game context
