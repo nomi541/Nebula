@@ -99,7 +99,8 @@ public class MallPackageDef extends BaseDef {
      * Display all skins via config
      */
     private boolean shouldIgnoreSaleWindow() {
-        return this.Tag == GameConstants.TAG_SKIN && Nebula.getConfig().getServerOptions().isShowAllSkinInMall();
+        return (this.Tag == GameConstants.TAG_SKIN && Nebula.getConfig().getServerOptions().isShowAllSkinInMall())
+                || Nebula.getConfig().getServerOptions().isShowAllPackagesInMall();
     }
 
     /**

@@ -133,6 +133,8 @@ public class Config {
         public boolean unlockAllStoryCGs = false;
         // Unlocks all mall skins without sale window restrictions
         public boolean showAllSkinInMall = true;
+        // Unlocks all mall packages without sale window restrictions
+        public boolean showAllPackagesInMall = true;
         // How long to wait (in seconds) after the last http request from a session before removing it from the server.
         public int sessionTimeout = 300;
         // The local server hour when daily, weekly, and monthly reset boundaries occur.

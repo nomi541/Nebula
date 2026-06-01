@@ -50,6 +50,10 @@ public class MallShopDef extends BaseDef {
      * Returns whether the item is currently within its configured mall list window.
      */
     public boolean isVisible() {
+        if (Nebula.getConfig().getServerOptions().isShowAllPackagesInMall()) {
+            return true;
+        }
+
         long now = Nebula.getCurrentServerTime();
         return (this.listTimeSeconds <= 0 || now >= this.listTimeSeconds)
                 && (this.delistTimeSeconds <= 0 || now < this.delistTimeSeconds);
