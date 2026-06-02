@@ -84301,4 +84301,1968 @@ public final class Public {
       static final FieldName nextPackage = FieldName.forField("NextPackage");
     }
   }
+
+  /**
+   * Protobuf type {@code ActivityPersonalityModel}
+   */
+  public static final class ActivityPersonalityModel extends ProtoMessage<ActivityPersonalityModel> implements Cloneable {
+    private static final long serialVersionUID = 0L;
+
+    /**
+     * <code>optional uint32 ChapterId = 1;</code>
+     */
+    private int chapterId;
+
+    /**
+     * <code>optional uint32 A = 2;</code>
+     */
+    private int a;
+
+    /**
+     * <code>optional uint32 B = 3;</code>
+     */
+    private int b;
+
+    /**
+     * <code>optional uint32 C = 4;</code>
+     */
+    private int c;
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     */
+    private final RepeatedByte nextPackage = RepeatedByte.newEmptyInstance();
+
+    private ActivityPersonalityModel() {
+    }
+
+    /**
+     * @return a new empty instance of {@code ActivityPersonalityModel}
+     */
+    public static ActivityPersonalityModel newInstance() {
+      return new ActivityPersonalityModel();
+    }
+
+    /**
+     * <code>optional uint32 ChapterId = 1;</code>
+     * @return whether the chapterId field is set
+     */
+    public boolean hasChapterId() {
+      return (bitField0_ & 0x00000001) != 0;
+    }
+
+    /**
+     * <code>optional uint32 ChapterId = 1;</code>
+     * @return this
+     */
+    public ActivityPersonalityModel clearChapterId() {
+      bitField0_ &= ~0x00000001;
+      chapterId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 ChapterId = 1;</code>
+     * @return the chapterId
+     */
+    public int getChapterId() {
+      return chapterId;
+    }
+
+    /**
+     * <code>optional uint32 ChapterId = 1;</code>
+     * @param value the chapterId to set
+     * @return this
+     */
+    public ActivityPersonalityModel setChapterId(final int value) {
+      bitField0_ |= 0x00000001;
+      chapterId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 A = 2;</code>
+     * @return whether the a field is set
+     */
+    public boolean hasA() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 A = 2;</code>
+     * @return this
+     */
+    public ActivityPersonalityModel clearA() {
+      bitField0_ &= ~0x00000002;
+      a = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 A = 2;</code>
+     * @return the a
+     */
+    public int getA() {
+      return a;
+    }
+
+    /**
+     * <code>optional uint32 A = 2;</code>
+     * @param value the a to set
+     * @return this
+     */
+    public ActivityPersonalityModel setA(final int value) {
+      bitField0_ |= 0x00000002;
+      a = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 B = 3;</code>
+     * @return whether the b field is set
+     */
+    public boolean hasB() {
+      return (bitField0_ & 0x00000004) != 0;
+    }
+
+    /**
+     * <code>optional uint32 B = 3;</code>
+     * @return this
+     */
+    public ActivityPersonalityModel clearB() {
+      bitField0_ &= ~0x00000004;
+      b = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 B = 3;</code>
+     * @return the b
+     */
+    public int getB() {
+      return b;
+    }
+
+    /**
+     * <code>optional uint32 B = 3;</code>
+     * @param value the b to set
+     * @return this
+     */
+    public ActivityPersonalityModel setB(final int value) {
+      bitField0_ |= 0x00000004;
+      b = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 C = 4;</code>
+     * @return whether the c field is set
+     */
+    public boolean hasC() {
+      return (bitField0_ & 0x00000008) != 0;
+    }
+
+    /**
+     * <code>optional uint32 C = 4;</code>
+     * @return this
+     */
+    public ActivityPersonalityModel clearC() {
+      bitField0_ &= ~0x00000008;
+      c = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 C = 4;</code>
+     * @return the c
+     */
+    public int getC() {
+      return c;
+    }
+
+    /**
+     * <code>optional uint32 C = 4;</code>
+     * @param value the c to set
+     * @return this
+     */
+    public ActivityPersonalityModel setC(final int value) {
+      bitField0_ |= 0x00000008;
+      c = value;
+      return this;
+    }
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     * @return whether the nextPackage field is set
+     */
+    public boolean hasNextPackage() {
+      return (bitField0_ & 0x00000010) != 0;
+    }
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     * @return this
+     */
+    public ActivityPersonalityModel clearNextPackage() {
+      bitField0_ &= ~0x00000010;
+      nextPackage.clear();
+      return this;
+    }
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableNextPackage()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public RepeatedByte getNextPackage() {
+      return nextPackage;
+    }
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public RepeatedByte getMutableNextPackage() {
+      bitField0_ |= 0x00000010;
+      return nextPackage;
+    }
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     * @param value the nextPackage to add
+     * @return this
+     */
+    public ActivityPersonalityModel addNextPackage(final byte value) {
+      bitField0_ |= 0x00000010;
+      nextPackage.add(value);
+      return this;
+    }
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     * @param values the nextPackage to add
+     * @return this
+     */
+    public ActivityPersonalityModel addAllNextPackage(final byte... values) {
+      bitField0_ |= 0x00000010;
+      nextPackage.addAll(values);
+      return this;
+    }
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     * @param values the nextPackage to set
+     * @return this
+     */
+    public ActivityPersonalityModel setNextPackage(final byte... values) {
+      bitField0_ |= 0x00000010;
+      nextPackage.copyFrom(values);
+      return this;
+    }
+
+    @Override
+    public ActivityPersonalityModel copyFrom(final ActivityPersonalityModel other) {
+      cachedSize = other.cachedSize;
+      if ((bitField0_ | other.bitField0_) != 0) {
+        bitField0_ = other.bitField0_;
+        chapterId = other.chapterId;
+        a = other.a;
+        b = other.b;
+        c = other.c;
+        nextPackage.copyFrom(other.nextPackage);
+      }
+      return this;
+    }
+
+    @Override
+    public ActivityPersonalityModel mergeFrom(final ActivityPersonalityModel other) {
+      if (other.isEmpty()) {
+        return this;
+      }
+      cachedSize = -1;
+      if (other.hasChapterId()) {
+        setChapterId(other.chapterId);
+      }
+      if (other.hasA()) {
+        setA(other.a);
+      }
+      if (other.hasB()) {
+        setB(other.b);
+      }
+      if (other.hasC()) {
+        setC(other.c);
+      }
+      if (other.hasNextPackage()) {
+        getMutableNextPackage().copyFrom(other.nextPackage);
+      }
+      return this;
+    }
+
+    @Override
+    public ActivityPersonalityModel clear() {
+      if (isEmpty()) {
+        return this;
+      }
+      cachedSize = -1;
+      bitField0_ = 0;
+      chapterId = 0;
+      a = 0;
+      b = 0;
+      c = 0;
+      nextPackage.clear();
+      return this;
+    }
+
+    @Override
+    public ActivityPersonalityModel clearQuick() {
+      if (isEmpty()) {
+        return this;
+      }
+      cachedSize = -1;
+      bitField0_ = 0;
+      nextPackage.clear();
+      return this;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+      if (o == this) {
+        return true;
+      }
+      if (!(o instanceof ActivityPersonalityModel)) {
+        return false;
+      }
+      ActivityPersonalityModel other = (ActivityPersonalityModel) o;
+      return bitField0_ == other.bitField0_
+        && (!hasChapterId() || chapterId == other.chapterId)
+        && (!hasA() || a == other.a)
+        && (!hasB() || b == other.b)
+        && (!hasC() || c == other.c)
+        && (!hasNextPackage() || nextPackage.equals(other.nextPackage));
+    }
+
+    @Override
+    public void writeTo(final ProtoSink output) throws IOException {
+      if ((bitField0_ & 0x00000001) != 0) {
+        output.writeRawByte((byte) 8);
+        output.writeUInt32NoTag(chapterId);
+      }
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeRawByte((byte) 16);
+        output.writeUInt32NoTag(a);
+      }
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeRawByte((byte) 24);
+        output.writeUInt32NoTag(b);
+      }
+      if ((bitField0_ & 0x00000008) != 0) {
+        output.writeRawByte((byte) 32);
+        output.writeUInt32NoTag(c);
+      }
+      if ((bitField0_ & 0x00000010) != 0) {
+        output.writeRawLittleEndian16((short) 32762);
+        output.writeBytesNoTag(nextPackage);
+      }
+    }
+
+    @Override
+    protected int computeSerializedSize() {
+      int size = 0;
+      if ((bitField0_ & 0x00000001) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(chapterId);
+      }
+      if ((bitField0_ & 0x00000002) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(a);
+      }
+      if ((bitField0_ & 0x00000004) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(b);
+      }
+      if ((bitField0_ & 0x00000008) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(c);
+      }
+      if ((bitField0_ & 0x00000010) != 0) {
+        size += 2 + ProtoSink.computeBytesSizeNoTag(nextPackage);
+      }
+      return size;
+    }
+
+    @Override
+    @SuppressWarnings("fallthrough")
+    public ActivityPersonalityModel mergeFrom(final ProtoSource input) throws IOException {
+      // Enabled Fall-Through Optimization (QuickBuffers)
+      int tag = input.readTag();
+      while (true) {
+        switch (tag) {
+          case 8: {
+            // chapterId
+            chapterId = input.readUInt32();
+            bitField0_ |= 0x00000001;
+            tag = input.readTag();
+            if (tag != 16) {
+              break;
+            }
+          }
+          case 16: {
+            // a
+            a = input.readUInt32();
+            bitField0_ |= 0x00000002;
+            tag = input.readTag();
+            if (tag != 24) {
+              break;
+            }
+          }
+          case 24: {
+            // b
+            b = input.readUInt32();
+            bitField0_ |= 0x00000004;
+            tag = input.readTag();
+            if (tag != 32) {
+              break;
+            }
+          }
+          case 32: {
+            // c
+            c = input.readUInt32();
+            bitField0_ |= 0x00000008;
+            tag = input.readTag();
+            if (tag != 16378) {
+              break;
+            }
+          }
+          case 16378: {
+            // nextPackage
+            input.readBytes(nextPackage);
+            bitField0_ |= 0x00000010;
+            tag = input.readTag();
+            if (tag != 0) {
+              break;
+            }
+          }
+          case 0: {
+            return this;
+          }
+          default: {
+            if (!input.skipField(tag)) {
+              return this;
+            }
+            tag = input.readTag();
+            break;
+          }
+        }
+      }
+    }
+
+    @Override
+    public void writeTo(final JsonSink output) throws IOException {
+      output.beginObject();
+      if ((bitField0_ & 0x00000001) != 0) {
+        output.writeUInt32(FieldNames.chapterId, chapterId);
+      }
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeUInt32(FieldNames.a, a);
+      }
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeUInt32(FieldNames.b, b);
+      }
+      if ((bitField0_ & 0x00000008) != 0) {
+        output.writeUInt32(FieldNames.c, c);
+      }
+      if ((bitField0_ & 0x00000010) != 0) {
+        output.writeBytes(FieldNames.nextPackage, nextPackage);
+      }
+      output.endObject();
+    }
+
+    @Override
+    public ActivityPersonalityModel mergeFrom(final JsonSource input) throws IOException {
+      if (!input.beginObject()) {
+        return this;
+      }
+      while (!input.isAtEnd()) {
+        switch (input.readFieldHash()) {
+          case -766458328: {
+            if (input.isAtField(FieldNames.chapterId)) {
+              if (!input.trySkipNullValue()) {
+                chapterId = input.readUInt32();
+                bitField0_ |= 0x00000001;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case 65: {
+            if (input.isAtField(FieldNames.a)) {
+              if (!input.trySkipNullValue()) {
+                a = input.readUInt32();
+                bitField0_ |= 0x00000002;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case 66: {
+            if (input.isAtField(FieldNames.b)) {
+              if (!input.trySkipNullValue()) {
+                b = input.readUInt32();
+                bitField0_ |= 0x00000004;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case 67: {
+            if (input.isAtField(FieldNames.c)) {
+              if (!input.trySkipNullValue()) {
+                c = input.readUInt32();
+                bitField0_ |= 0x00000008;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case -2082324045: {
+            if (input.isAtField(FieldNames.nextPackage)) {
+              if (!input.trySkipNullValue()) {
+                input.readBytes(nextPackage);
+                bitField0_ |= 0x00000010;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          default: {
+            input.skipUnknownField();
+            break;
+          }
+        }
+      }
+      input.endObject();
+      return this;
+    }
+
+    @Override
+    public ActivityPersonalityModel clone() {
+      return new ActivityPersonalityModel().copyFrom(this);
+    }
+
+    @Override
+    public boolean isEmpty() {
+      return ((bitField0_) == 0);
+    }
+
+    public static ActivityPersonalityModel parseFrom(final byte[] data) throws
+        InvalidProtocolBufferException {
+      return ProtoMessage.mergeFrom(new ActivityPersonalityModel(), data).checkInitialized();
+    }
+
+    public static ActivityPersonalityModel parseFrom(final ProtoSource input) throws IOException {
+      return ProtoMessage.mergeFrom(new ActivityPersonalityModel(), input).checkInitialized();
+    }
+
+    public static ActivityPersonalityModel parseFrom(final JsonSource input) throws IOException {
+      return ProtoMessage.mergeFrom(new ActivityPersonalityModel(), input).checkInitialized();
+    }
+
+    /**
+     * @return factory for creating ActivityPersonalityModel messages
+     */
+    public static MessageFactory<ActivityPersonalityModel> getFactory() {
+      return ActivityPersonalityModelFactory.INSTANCE;
+    }
+
+    private enum ActivityPersonalityModelFactory implements MessageFactory<ActivityPersonalityModel> {
+      INSTANCE;
+
+      @Override
+      public ActivityPersonalityModel create() {
+        return ActivityPersonalityModel.newInstance();
+      }
+    }
+
+    /**
+     * Contains name constants used for serializing JSON
+     */
+    static class FieldNames {
+      static final FieldName chapterId = FieldName.forField("ChapterId");
+
+      static final FieldName a = FieldName.forField("A");
+
+      static final FieldName b = FieldName.forField("B");
+
+      static final FieldName c = FieldName.forField("C");
+
+      static final FieldName nextPackage = FieldName.forField("NextPackage");
+    }
+  }
+
+  /**
+   * Protobuf type {@code ActivityHistoryStory}
+   */
+  public static final class ActivityHistoryStory extends ProtoMessage<ActivityHistoryStory> implements Cloneable {
+    private static final long serialVersionUID = 0L;
+
+    /**
+     * <code>optional uint32 Id = 1;</code>
+     */
+    private int id;
+
+    /**
+     * <code>optional bool Receive = 4;</code>
+     */
+    private boolean receive;
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     */
+    private final RepeatedByte nextPackage = RepeatedByte.newEmptyInstance();
+
+    /**
+     * <code>repeated .ActivityStoryChoice Major = 2;</code>
+     */
+    private final RepeatedMessage<ActivityStoryChoice> major = RepeatedMessage.newEmptyInstance(ActivityStoryChoice.getFactory());
+
+    /**
+     * <code>repeated .ActivityStoryChoice Personality = 3;</code>
+     */
+    private final RepeatedMessage<ActivityStoryChoice> personality = RepeatedMessage.newEmptyInstance(ActivityStoryChoice.getFactory());
+
+    private ActivityHistoryStory() {
+    }
+
+    /**
+     * @return a new empty instance of {@code ActivityHistoryStory}
+     */
+    public static ActivityHistoryStory newInstance() {
+      return new ActivityHistoryStory();
+    }
+
+    /**
+     * <code>optional uint32 Id = 1;</code>
+     * @return whether the id field is set
+     */
+    public boolean hasId() {
+      return (bitField0_ & 0x00000001) != 0;
+    }
+
+    /**
+     * <code>optional uint32 Id = 1;</code>
+     * @return this
+     */
+    public ActivityHistoryStory clearId() {
+      bitField0_ &= ~0x00000001;
+      id = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 Id = 1;</code>
+     * @return the id
+     */
+    public int getId() {
+      return id;
+    }
+
+    /**
+     * <code>optional uint32 Id = 1;</code>
+     * @param value the id to set
+     * @return this
+     */
+    public ActivityHistoryStory setId(final int value) {
+      bitField0_ |= 0x00000001;
+      id = value;
+      return this;
+    }
+
+    /**
+     * <code>optional bool Receive = 4;</code>
+     * @return whether the receive field is set
+     */
+    public boolean hasReceive() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional bool Receive = 4;</code>
+     * @return this
+     */
+    public ActivityHistoryStory clearReceive() {
+      bitField0_ &= ~0x00000002;
+      receive = false;
+      return this;
+    }
+
+    /**
+     * <code>optional bool Receive = 4;</code>
+     * @return the receive
+     */
+    public boolean getReceive() {
+      return receive;
+    }
+
+    /**
+     * <code>optional bool Receive = 4;</code>
+     * @param value the receive to set
+     * @return this
+     */
+    public ActivityHistoryStory setReceive(final boolean value) {
+      bitField0_ |= 0x00000002;
+      receive = value;
+      return this;
+    }
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     * @return whether the nextPackage field is set
+     */
+    public boolean hasNextPackage() {
+      return (bitField0_ & 0x00000004) != 0;
+    }
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     * @return this
+     */
+    public ActivityHistoryStory clearNextPackage() {
+      bitField0_ &= ~0x00000004;
+      nextPackage.clear();
+      return this;
+    }
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableNextPackage()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public RepeatedByte getNextPackage() {
+      return nextPackage;
+    }
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public RepeatedByte getMutableNextPackage() {
+      bitField0_ |= 0x00000004;
+      return nextPackage;
+    }
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     * @param value the nextPackage to add
+     * @return this
+     */
+    public ActivityHistoryStory addNextPackage(final byte value) {
+      bitField0_ |= 0x00000004;
+      nextPackage.add(value);
+      return this;
+    }
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     * @param values the nextPackage to add
+     * @return this
+     */
+    public ActivityHistoryStory addAllNextPackage(final byte... values) {
+      bitField0_ |= 0x00000004;
+      nextPackage.addAll(values);
+      return this;
+    }
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     * @param values the nextPackage to set
+     * @return this
+     */
+    public ActivityHistoryStory setNextPackage(final byte... values) {
+      bitField0_ |= 0x00000004;
+      nextPackage.copyFrom(values);
+      return this;
+    }
+
+    /**
+     * <code>repeated .ActivityStoryChoice Major = 2;</code>
+     * @return whether the major field is set
+     */
+    public boolean hasMajor() {
+      return (bitField0_ & 0x00000008) != 0;
+    }
+
+    /**
+     * <code>repeated .ActivityStoryChoice Major = 2;</code>
+     * @return this
+     */
+    public ActivityHistoryStory clearMajor() {
+      bitField0_ &= ~0x00000008;
+      major.clear();
+      return this;
+    }
+
+    /**
+     * <code>repeated .ActivityStoryChoice Major = 2;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableMajor()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public RepeatedMessage<ActivityStoryChoice> getMajor() {
+      return major;
+    }
+
+    /**
+     * <code>repeated .ActivityStoryChoice Major = 2;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public RepeatedMessage<ActivityStoryChoice> getMutableMajor() {
+      bitField0_ |= 0x00000008;
+      return major;
+    }
+
+    /**
+     * <code>repeated .ActivityStoryChoice Major = 2;</code>
+     * @param value the major to add
+     * @return this
+     */
+    public ActivityHistoryStory addMajor(final ActivityStoryChoice value) {
+      bitField0_ |= 0x00000008;
+      major.add(value);
+      return this;
+    }
+
+    /**
+     * <code>repeated .ActivityStoryChoice Major = 2;</code>
+     * @param values the major to add
+     * @return this
+     */
+    public ActivityHistoryStory addAllMajor(final ActivityStoryChoice... values) {
+      bitField0_ |= 0x00000008;
+      major.addAll(values);
+      return this;
+    }
+
+    /**
+     * <code>repeated .ActivityStoryChoice Personality = 3;</code>
+     * @return whether the personality field is set
+     */
+    public boolean hasPersonality() {
+      return (bitField0_ & 0x00000010) != 0;
+    }
+
+    /**
+     * <code>repeated .ActivityStoryChoice Personality = 3;</code>
+     * @return this
+     */
+    public ActivityHistoryStory clearPersonality() {
+      bitField0_ &= ~0x00000010;
+      personality.clear();
+      return this;
+    }
+
+    /**
+     * <code>repeated .ActivityStoryChoice Personality = 3;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutablePersonality()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public RepeatedMessage<ActivityStoryChoice> getPersonality() {
+      return personality;
+    }
+
+    /**
+     * <code>repeated .ActivityStoryChoice Personality = 3;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public RepeatedMessage<ActivityStoryChoice> getMutablePersonality() {
+      bitField0_ |= 0x00000010;
+      return personality;
+    }
+
+    /**
+     * <code>repeated .ActivityStoryChoice Personality = 3;</code>
+     * @param value the personality to add
+     * @return this
+     */
+    public ActivityHistoryStory addPersonality(final ActivityStoryChoice value) {
+      bitField0_ |= 0x00000010;
+      personality.add(value);
+      return this;
+    }
+
+    /**
+     * <code>repeated .ActivityStoryChoice Personality = 3;</code>
+     * @param values the personality to add
+     * @return this
+     */
+    public ActivityHistoryStory addAllPersonality(final ActivityStoryChoice... values) {
+      bitField0_ |= 0x00000010;
+      personality.addAll(values);
+      return this;
+    }
+
+    @Override
+    public ActivityHistoryStory copyFrom(final ActivityHistoryStory other) {
+      cachedSize = other.cachedSize;
+      if ((bitField0_ | other.bitField0_) != 0) {
+        bitField0_ = other.bitField0_;
+        id = other.id;
+        receive = other.receive;
+        nextPackage.copyFrom(other.nextPackage);
+        major.copyFrom(other.major);
+        personality.copyFrom(other.personality);
+      }
+      return this;
+    }
+
+    @Override
+    public ActivityHistoryStory mergeFrom(final ActivityHistoryStory other) {
+      if (other.isEmpty()) {
+        return this;
+      }
+      cachedSize = -1;
+      if (other.hasId()) {
+        setId(other.id);
+      }
+      if (other.hasReceive()) {
+        setReceive(other.receive);
+      }
+      if (other.hasNextPackage()) {
+        getMutableNextPackage().copyFrom(other.nextPackage);
+      }
+      if (other.hasMajor()) {
+        getMutableMajor().addAll(other.major);
+      }
+      if (other.hasPersonality()) {
+        getMutablePersonality().addAll(other.personality);
+      }
+      return this;
+    }
+
+    @Override
+    public ActivityHistoryStory clear() {
+      if (isEmpty()) {
+        return this;
+      }
+      cachedSize = -1;
+      bitField0_ = 0;
+      id = 0;
+      receive = false;
+      nextPackage.clear();
+      major.clear();
+      personality.clear();
+      return this;
+    }
+
+    @Override
+    public ActivityHistoryStory clearQuick() {
+      if (isEmpty()) {
+        return this;
+      }
+      cachedSize = -1;
+      bitField0_ = 0;
+      nextPackage.clear();
+      major.clearQuick();
+      personality.clearQuick();
+      return this;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+      if (o == this) {
+        return true;
+      }
+      if (!(o instanceof ActivityHistoryStory)) {
+        return false;
+      }
+      ActivityHistoryStory other = (ActivityHistoryStory) o;
+      return bitField0_ == other.bitField0_
+        && (!hasId() || id == other.id)
+        && (!hasReceive() || receive == other.receive)
+        && (!hasNextPackage() || nextPackage.equals(other.nextPackage))
+        && (!hasMajor() || major.equals(other.major))
+        && (!hasPersonality() || personality.equals(other.personality));
+    }
+
+    @Override
+    public void writeTo(final ProtoSink output) throws IOException {
+      if ((bitField0_ & 0x00000001) != 0) {
+        output.writeRawByte((byte) 8);
+        output.writeUInt32NoTag(id);
+      }
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeRawByte((byte) 32);
+        output.writeBoolNoTag(receive);
+      }
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeRawLittleEndian16((short) 32762);
+        output.writeBytesNoTag(nextPackage);
+      }
+      if ((bitField0_ & 0x00000008) != 0) {
+        for (int i = 0; i < major.length(); i++) {
+          output.writeRawByte((byte) 18);
+          output.writeMessageNoTag(major.get(i));
+        }
+      }
+      if ((bitField0_ & 0x00000010) != 0) {
+        for (int i = 0; i < personality.length(); i++) {
+          output.writeRawByte((byte) 26);
+          output.writeMessageNoTag(personality.get(i));
+        }
+      }
+    }
+
+    @Override
+    protected int computeSerializedSize() {
+      int size = 0;
+      if ((bitField0_ & 0x00000001) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(id);
+      }
+      if ((bitField0_ & 0x00000002) != 0) {
+        size += 2;
+      }
+      if ((bitField0_ & 0x00000004) != 0) {
+        size += 2 + ProtoSink.computeBytesSizeNoTag(nextPackage);
+      }
+      if ((bitField0_ & 0x00000008) != 0) {
+        size += (1 * major.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(major);
+      }
+      if ((bitField0_ & 0x00000010) != 0) {
+        size += (1 * personality.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(personality);
+      }
+      return size;
+    }
+
+    @Override
+    @SuppressWarnings("fallthrough")
+    public ActivityHistoryStory mergeFrom(final ProtoSource input) throws IOException {
+      // Enabled Fall-Through Optimization (QuickBuffers)
+      int tag = input.readTag();
+      while (true) {
+        switch (tag) {
+          case 8: {
+            // id
+            id = input.readUInt32();
+            bitField0_ |= 0x00000001;
+            tag = input.readTag();
+            if (tag != 32) {
+              break;
+            }
+          }
+          case 32: {
+            // receive
+            receive = input.readBool();
+            bitField0_ |= 0x00000002;
+            tag = input.readTag();
+            if (tag != 16378) {
+              break;
+            }
+          }
+          case 16378: {
+            // nextPackage
+            input.readBytes(nextPackage);
+            bitField0_ |= 0x00000004;
+            tag = input.readTag();
+            if (tag != 18) {
+              break;
+            }
+          }
+          case 18: {
+            // major
+            tag = input.readRepeatedMessage(major, tag);
+            bitField0_ |= 0x00000008;
+            if (tag != 26) {
+              break;
+            }
+          }
+          case 26: {
+            // personality
+            tag = input.readRepeatedMessage(personality, tag);
+            bitField0_ |= 0x00000010;
+            if (tag != 0) {
+              break;
+            }
+          }
+          case 0: {
+            return this;
+          }
+          default: {
+            if (!input.skipField(tag)) {
+              return this;
+            }
+            tag = input.readTag();
+            break;
+          }
+        }
+      }
+    }
+
+    @Override
+    public void writeTo(final JsonSink output) throws IOException {
+      output.beginObject();
+      if ((bitField0_ & 0x00000001) != 0) {
+        output.writeUInt32(FieldNames.id, id);
+      }
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeBool(FieldNames.receive, receive);
+      }
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeBytes(FieldNames.nextPackage, nextPackage);
+      }
+      if ((bitField0_ & 0x00000008) != 0) {
+        output.writeRepeatedMessage(FieldNames.major, major);
+      }
+      if ((bitField0_ & 0x00000010) != 0) {
+        output.writeRepeatedMessage(FieldNames.personality, personality);
+      }
+      output.endObject();
+    }
+
+    @Override
+    public ActivityHistoryStory mergeFrom(final JsonSource input) throws IOException {
+      if (!input.beginObject()) {
+        return this;
+      }
+      while (!input.isAtEnd()) {
+        switch (input.readFieldHash()) {
+          case 2363: {
+            if (input.isAtField(FieldNames.id)) {
+              if (!input.trySkipNullValue()) {
+                id = input.readUInt32();
+                bitField0_ |= 0x00000001;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case -1548023101: {
+            if (input.isAtField(FieldNames.receive)) {
+              if (!input.trySkipNullValue()) {
+                receive = input.readBool();
+                bitField0_ |= 0x00000002;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case -2082324045: {
+            if (input.isAtField(FieldNames.nextPackage)) {
+              if (!input.trySkipNullValue()) {
+                input.readBytes(nextPackage);
+                bitField0_ |= 0x00000004;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case 74106265: {
+            if (input.isAtField(FieldNames.major)) {
+              if (!input.trySkipNullValue()) {
+                input.readRepeatedMessage(major);
+                bitField0_ |= 0x00000008;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case 1243902542: {
+            if (input.isAtField(FieldNames.personality)) {
+              if (!input.trySkipNullValue()) {
+                input.readRepeatedMessage(personality);
+                bitField0_ |= 0x00000010;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          default: {
+            input.skipUnknownField();
+            break;
+          }
+        }
+      }
+      input.endObject();
+      return this;
+    }
+
+    @Override
+    public ActivityHistoryStory clone() {
+      return new ActivityHistoryStory().copyFrom(this);
+    }
+
+    @Override
+    public boolean isEmpty() {
+      return ((bitField0_) == 0);
+    }
+
+    public static ActivityHistoryStory parseFrom(final byte[] data) throws
+        InvalidProtocolBufferException {
+      return ProtoMessage.mergeFrom(new ActivityHistoryStory(), data).checkInitialized();
+    }
+
+    public static ActivityHistoryStory parseFrom(final ProtoSource input) throws IOException {
+      return ProtoMessage.mergeFrom(new ActivityHistoryStory(), input).checkInitialized();
+    }
+
+    public static ActivityHistoryStory parseFrom(final JsonSource input) throws IOException {
+      return ProtoMessage.mergeFrom(new ActivityHistoryStory(), input).checkInitialized();
+    }
+
+    /**
+     * @return factory for creating ActivityHistoryStory messages
+     */
+    public static MessageFactory<ActivityHistoryStory> getFactory() {
+      return ActivityHistoryStoryFactory.INSTANCE;
+    }
+
+    private enum ActivityHistoryStoryFactory implements MessageFactory<ActivityHistoryStory> {
+      INSTANCE;
+
+      @Override
+      public ActivityHistoryStory create() {
+        return ActivityHistoryStory.newInstance();
+      }
+    }
+
+    /**
+     * Contains name constants used for serializing JSON
+     */
+    static class FieldNames {
+      static final FieldName id = FieldName.forField("Id");
+
+      static final FieldName receive = FieldName.forField("Receive");
+
+      static final FieldName nextPackage = FieldName.forField("NextPackage");
+
+      static final FieldName major = FieldName.forField("Major");
+
+      static final FieldName personality = FieldName.forField("Personality");
+    }
+  }
+
+  /**
+   * Protobuf type {@code ActivityHistoryStoryChapter}
+   */
+  public static final class ActivityHistoryStoryChapter extends ProtoMessage<ActivityHistoryStoryChapter> implements Cloneable {
+    private static final long serialVersionUID = 0L;
+
+    /**
+     * <code>optional uint64 BuildId = 2;</code>
+     */
+    private long buildId;
+
+    /**
+     * <code>optional uint32 ChapterId = 1;</code>
+     */
+    private int chapterId;
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     */
+    private final RepeatedByte nextPackage = RepeatedByte.newEmptyInstance();
+
+    /**
+     * <code>repeated uint32 Evidences = 3;</code>
+     */
+    private final RepeatedInt evidences = RepeatedInt.newEmptyInstance();
+
+    /**
+     * <code>repeated .ActivityHistoryStory Stories = 4;</code>
+     */
+    private final RepeatedMessage<ActivityHistoryStory> stories = RepeatedMessage.newEmptyInstance(ActivityHistoryStory.getFactory());
+
+    private ActivityHistoryStoryChapter() {
+    }
+
+    /**
+     * @return a new empty instance of {@code ActivityHistoryStoryChapter}
+     */
+    public static ActivityHistoryStoryChapter newInstance() {
+      return new ActivityHistoryStoryChapter();
+    }
+
+    /**
+     * <code>optional uint64 BuildId = 2;</code>
+     * @return whether the buildId field is set
+     */
+    public boolean hasBuildId() {
+      return (bitField0_ & 0x00000001) != 0;
+    }
+
+    /**
+     * <code>optional uint64 BuildId = 2;</code>
+     * @return this
+     */
+    public ActivityHistoryStoryChapter clearBuildId() {
+      bitField0_ &= ~0x00000001;
+      buildId = 0L;
+      return this;
+    }
+
+    /**
+     * <code>optional uint64 BuildId = 2;</code>
+     * @return the buildId
+     */
+    public long getBuildId() {
+      return buildId;
+    }
+
+    /**
+     * <code>optional uint64 BuildId = 2;</code>
+     * @param value the buildId to set
+     * @return this
+     */
+    public ActivityHistoryStoryChapter setBuildId(final long value) {
+      bitField0_ |= 0x00000001;
+      buildId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 ChapterId = 1;</code>
+     * @return whether the chapterId field is set
+     */
+    public boolean hasChapterId() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 ChapterId = 1;</code>
+     * @return this
+     */
+    public ActivityHistoryStoryChapter clearChapterId() {
+      bitField0_ &= ~0x00000002;
+      chapterId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 ChapterId = 1;</code>
+     * @return the chapterId
+     */
+    public int getChapterId() {
+      return chapterId;
+    }
+
+    /**
+     * <code>optional uint32 ChapterId = 1;</code>
+     * @param value the chapterId to set
+     * @return this
+     */
+    public ActivityHistoryStoryChapter setChapterId(final int value) {
+      bitField0_ |= 0x00000002;
+      chapterId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     * @return whether the nextPackage field is set
+     */
+    public boolean hasNextPackage() {
+      return (bitField0_ & 0x00000004) != 0;
+    }
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     * @return this
+     */
+    public ActivityHistoryStoryChapter clearNextPackage() {
+      bitField0_ &= ~0x00000004;
+      nextPackage.clear();
+      return this;
+    }
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableNextPackage()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public RepeatedByte getNextPackage() {
+      return nextPackage;
+    }
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public RepeatedByte getMutableNextPackage() {
+      bitField0_ |= 0x00000004;
+      return nextPackage;
+    }
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     * @param value the nextPackage to add
+     * @return this
+     */
+    public ActivityHistoryStoryChapter addNextPackage(final byte value) {
+      bitField0_ |= 0x00000004;
+      nextPackage.add(value);
+      return this;
+    }
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     * @param values the nextPackage to add
+     * @return this
+     */
+    public ActivityHistoryStoryChapter addAllNextPackage(final byte... values) {
+      bitField0_ |= 0x00000004;
+      nextPackage.addAll(values);
+      return this;
+    }
+
+    /**
+     * <code>optional bytes NextPackage = 2047;</code>
+     * @param values the nextPackage to set
+     * @return this
+     */
+    public ActivityHistoryStoryChapter setNextPackage(final byte... values) {
+      bitField0_ |= 0x00000004;
+      nextPackage.copyFrom(values);
+      return this;
+    }
+
+    /**
+     * <code>repeated uint32 Evidences = 3;</code>
+     * @return whether the evidences field is set
+     */
+    public boolean hasEvidences() {
+      return (bitField0_ & 0x00000008) != 0;
+    }
+
+    /**
+     * <code>repeated uint32 Evidences = 3;</code>
+     * @return this
+     */
+    public ActivityHistoryStoryChapter clearEvidences() {
+      bitField0_ &= ~0x00000008;
+      evidences.clear();
+      return this;
+    }
+
+    /**
+     * <code>repeated uint32 Evidences = 3;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableEvidences()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public RepeatedInt getEvidences() {
+      return evidences;
+    }
+
+    /**
+     * <code>repeated uint32 Evidences = 3;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public RepeatedInt getMutableEvidences() {
+      bitField0_ |= 0x00000008;
+      return evidences;
+    }
+
+    /**
+     * <code>repeated uint32 Evidences = 3;</code>
+     * @param value the evidences to add
+     * @return this
+     */
+    public ActivityHistoryStoryChapter addEvidences(final int value) {
+      bitField0_ |= 0x00000008;
+      evidences.add(value);
+      return this;
+    }
+
+    /**
+     * <code>repeated uint32 Evidences = 3;</code>
+     * @param values the evidences to add
+     * @return this
+     */
+    public ActivityHistoryStoryChapter addAllEvidences(final int... values) {
+      bitField0_ |= 0x00000008;
+      evidences.addAll(values);
+      return this;
+    }
+
+    /**
+     * <code>repeated .ActivityHistoryStory Stories = 4;</code>
+     * @return whether the stories field is set
+     */
+    public boolean hasStories() {
+      return (bitField0_ & 0x00000010) != 0;
+    }
+
+    /**
+     * <code>repeated .ActivityHistoryStory Stories = 4;</code>
+     * @return this
+     */
+    public ActivityHistoryStoryChapter clearStories() {
+      bitField0_ &= ~0x00000010;
+      stories.clear();
+      return this;
+    }
+
+    /**
+     * <code>repeated .ActivityHistoryStory Stories = 4;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableStories()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public RepeatedMessage<ActivityHistoryStory> getStories() {
+      return stories;
+    }
+
+    /**
+     * <code>repeated .ActivityHistoryStory Stories = 4;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public RepeatedMessage<ActivityHistoryStory> getMutableStories() {
+      bitField0_ |= 0x00000010;
+      return stories;
+    }
+
+    /**
+     * <code>repeated .ActivityHistoryStory Stories = 4;</code>
+     * @param value the stories to add
+     * @return this
+     */
+    public ActivityHistoryStoryChapter addStories(final ActivityHistoryStory value) {
+      bitField0_ |= 0x00000010;
+      stories.add(value);
+      return this;
+    }
+
+    /**
+     * <code>repeated .ActivityHistoryStory Stories = 4;</code>
+     * @param values the stories to add
+     * @return this
+     */
+    public ActivityHistoryStoryChapter addAllStories(final ActivityHistoryStory... values) {
+      bitField0_ |= 0x00000010;
+      stories.addAll(values);
+      return this;
+    }
+
+    @Override
+    public ActivityHistoryStoryChapter copyFrom(final ActivityHistoryStoryChapter other) {
+      cachedSize = other.cachedSize;
+      if ((bitField0_ | other.bitField0_) != 0) {
+        bitField0_ = other.bitField0_;
+        buildId = other.buildId;
+        chapterId = other.chapterId;
+        nextPackage.copyFrom(other.nextPackage);
+        evidences.copyFrom(other.evidences);
+        stories.copyFrom(other.stories);
+      }
+      return this;
+    }
+
+    @Override
+    public ActivityHistoryStoryChapter mergeFrom(final ActivityHistoryStoryChapter other) {
+      if (other.isEmpty()) {
+        return this;
+      }
+      cachedSize = -1;
+      if (other.hasBuildId()) {
+        setBuildId(other.buildId);
+      }
+      if (other.hasChapterId()) {
+        setChapterId(other.chapterId);
+      }
+      if (other.hasNextPackage()) {
+        getMutableNextPackage().copyFrom(other.nextPackage);
+      }
+      if (other.hasEvidences()) {
+        getMutableEvidences().addAll(other.evidences);
+      }
+      if (other.hasStories()) {
+        getMutableStories().addAll(other.stories);
+      }
+      return this;
+    }
+
+    @Override
+    public ActivityHistoryStoryChapter clear() {
+      if (isEmpty()) {
+        return this;
+      }
+      cachedSize = -1;
+      bitField0_ = 0;
+      buildId = 0L;
+      chapterId = 0;
+      nextPackage.clear();
+      evidences.clear();
+      stories.clear();
+      return this;
+    }
+
+    @Override
+    public ActivityHistoryStoryChapter clearQuick() {
+      if (isEmpty()) {
+        return this;
+      }
+      cachedSize = -1;
+      bitField0_ = 0;
+      nextPackage.clear();
+      evidences.clear();
+      stories.clearQuick();
+      return this;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+      if (o == this) {
+        return true;
+      }
+      if (!(o instanceof ActivityHistoryStoryChapter)) {
+        return false;
+      }
+      ActivityHistoryStoryChapter other = (ActivityHistoryStoryChapter) o;
+      return bitField0_ == other.bitField0_
+        && (!hasBuildId() || buildId == other.buildId)
+        && (!hasChapterId() || chapterId == other.chapterId)
+        && (!hasNextPackage() || nextPackage.equals(other.nextPackage))
+        && (!hasEvidences() || evidences.equals(other.evidences))
+        && (!hasStories() || stories.equals(other.stories));
+    }
+
+    @Override
+    public void writeTo(final ProtoSink output) throws IOException {
+      if ((bitField0_ & 0x00000001) != 0) {
+        output.writeRawByte((byte) 16);
+        output.writeUInt64NoTag(buildId);
+      }
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeRawByte((byte) 8);
+        output.writeUInt32NoTag(chapterId);
+      }
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeRawLittleEndian16((short) 32762);
+        output.writeBytesNoTag(nextPackage);
+      }
+      if ((bitField0_ & 0x00000008) != 0) {
+        for (int i = 0; i < evidences.length(); i++) {
+          output.writeRawByte((byte) 24);
+          output.writeUInt32NoTag(evidences.array()[i]);
+        }
+      }
+      if ((bitField0_ & 0x00000010) != 0) {
+        for (int i = 0; i < stories.length(); i++) {
+          output.writeRawByte((byte) 34);
+          output.writeMessageNoTag(stories.get(i));
+        }
+      }
+    }
+
+    @Override
+    protected int computeSerializedSize() {
+      int size = 0;
+      if ((bitField0_ & 0x00000001) != 0) {
+        size += 1 + ProtoSink.computeUInt64SizeNoTag(buildId);
+      }
+      if ((bitField0_ & 0x00000002) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(chapterId);
+      }
+      if ((bitField0_ & 0x00000004) != 0) {
+        size += 2 + ProtoSink.computeBytesSizeNoTag(nextPackage);
+      }
+      if ((bitField0_ & 0x00000008) != 0) {
+        size += (1 * evidences.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(evidences);
+      }
+      if ((bitField0_ & 0x00000010) != 0) {
+        size += (1 * stories.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(stories);
+      }
+      return size;
+    }
+
+    @Override
+    @SuppressWarnings("fallthrough")
+    public ActivityHistoryStoryChapter mergeFrom(final ProtoSource input) throws IOException {
+      // Enabled Fall-Through Optimization (QuickBuffers)
+      int tag = input.readTag();
+      while (true) {
+        switch (tag) {
+          case 16: {
+            // buildId
+            buildId = input.readUInt64();
+            bitField0_ |= 0x00000001;
+            tag = input.readTag();
+            if (tag != 8) {
+              break;
+            }
+          }
+          case 8: {
+            // chapterId
+            chapterId = input.readUInt32();
+            bitField0_ |= 0x00000002;
+            tag = input.readTag();
+            if (tag != 16378) {
+              break;
+            }
+          }
+          case 16378: {
+            // nextPackage
+            input.readBytes(nextPackage);
+            bitField0_ |= 0x00000004;
+            tag = input.readTag();
+            if (tag != 26) {
+              break;
+            }
+          }
+          case 26: {
+            // evidences [packed=true]
+            input.readPackedUInt32(evidences, tag);
+            bitField0_ |= 0x00000008;
+            tag = input.readTag();
+            if (tag != 34) {
+              break;
+            }
+          }
+          case 34: {
+            // stories
+            tag = input.readRepeatedMessage(stories, tag);
+            bitField0_ |= 0x00000010;
+            if (tag != 0) {
+              break;
+            }
+          }
+          case 0: {
+            return this;
+          }
+          default: {
+            if (!input.skipField(tag)) {
+              return this;
+            }
+            tag = input.readTag();
+            break;
+          }
+          case 24: {
+            // evidences [packed=false]
+            tag = input.readRepeatedUInt32(evidences, tag);
+            bitField0_ |= 0x00000008;
+            break;
+          }
+        }
+      }
+    }
+
+    @Override
+    public void writeTo(final JsonSink output) throws IOException {
+      output.beginObject();
+      if ((bitField0_ & 0x00000001) != 0) {
+        output.writeUInt64(FieldNames.buildId, buildId);
+      }
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeUInt32(FieldNames.chapterId, chapterId);
+      }
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeBytes(FieldNames.nextPackage, nextPackage);
+      }
+      if ((bitField0_ & 0x00000008) != 0) {
+        output.writeRepeatedUInt32(FieldNames.evidences, evidences);
+      }
+      if ((bitField0_ & 0x00000010) != 0) {
+        output.writeRepeatedMessage(FieldNames.stories, stories);
+      }
+      output.endObject();
+    }
+
+    @Override
+    public ActivityHistoryStoryChapter mergeFrom(final JsonSource input) throws IOException {
+      if (!input.beginObject()) {
+        return this;
+      }
+      while (!input.isAtEnd()) {
+        switch (input.readFieldHash()) {
+          case 1895597065: {
+            if (input.isAtField(FieldNames.buildId)) {
+              if (!input.trySkipNullValue()) {
+                buildId = input.readUInt64();
+                bitField0_ |= 0x00000001;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case -766458328: {
+            if (input.isAtField(FieldNames.chapterId)) {
+              if (!input.trySkipNullValue()) {
+                chapterId = input.readUInt32();
+                bitField0_ |= 0x00000002;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case -2082324045: {
+            if (input.isAtField(FieldNames.nextPackage)) {
+              if (!input.trySkipNullValue()) {
+                input.readBytes(nextPackage);
+                bitField0_ |= 0x00000004;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case 991055068: {
+            if (input.isAtField(FieldNames.evidences)) {
+              if (!input.trySkipNullValue()) {
+                input.readRepeatedUInt32(evidences);
+                bitField0_ |= 0x00000008;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case -219613133: {
+            if (input.isAtField(FieldNames.stories)) {
+              if (!input.trySkipNullValue()) {
+                input.readRepeatedMessage(stories);
+                bitField0_ |= 0x00000010;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          default: {
+            input.skipUnknownField();
+            break;
+          }
+        }
+      }
+      input.endObject();
+      return this;
+    }
+
+    @Override
+    public ActivityHistoryStoryChapter clone() {
+      return new ActivityHistoryStoryChapter().copyFrom(this);
+    }
+
+    @Override
+    public boolean isEmpty() {
+      return ((bitField0_) == 0);
+    }
+
+    public static ActivityHistoryStoryChapter parseFrom(final byte[] data) throws
+        InvalidProtocolBufferException {
+      return ProtoMessage.mergeFrom(new ActivityHistoryStoryChapter(), data).checkInitialized();
+    }
+
+    public static ActivityHistoryStoryChapter parseFrom(final ProtoSource input) throws
+        IOException {
+      return ProtoMessage.mergeFrom(new ActivityHistoryStoryChapter(), input).checkInitialized();
+    }
+
+    public static ActivityHistoryStoryChapter parseFrom(final JsonSource input) throws IOException {
+      return ProtoMessage.mergeFrom(new ActivityHistoryStoryChapter(), input).checkInitialized();
+    }
+
+    /**
+     * @return factory for creating ActivityHistoryStoryChapter messages
+     */
+    public static MessageFactory<ActivityHistoryStoryChapter> getFactory() {
+      return ActivityHistoryStoryChapterFactory.INSTANCE;
+    }
+
+    private enum ActivityHistoryStoryChapterFactory implements MessageFactory<ActivityHistoryStoryChapter> {
+      INSTANCE;
+
+      @Override
+      public ActivityHistoryStoryChapter create() {
+        return ActivityHistoryStoryChapter.newInstance();
+      }
+    }
+
+    /**
+     * Contains name constants used for serializing JSON
+     */
+    static class FieldNames {
+      static final FieldName buildId = FieldName.forField("BuildId");
+
+      static final FieldName chapterId = FieldName.forField("ChapterId");
+
+      static final FieldName nextPackage = FieldName.forField("NextPackage");
+
+      static final FieldName evidences = FieldName.forField("Evidences");
+
+      static final FieldName stories = FieldName.forField("Stories");
+    }
+  }
 }

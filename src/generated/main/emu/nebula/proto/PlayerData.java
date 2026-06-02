@@ -264,6 +264,11 @@ public final class PlayerData {
     private final RepeatedMessage<Public.ActivityHonor> activityHonors = RepeatedMessage.newEmptyInstance(Public.ActivityHonor.getFactory());
 
     /**
+     * <code>repeated .ActivityPersonalityModel PersonalityModels = 120;</code>
+     */
+    private final RepeatedMessage<Public.ActivityPersonalityModel> personalityModels = RepeatedMessage.newEmptyInstance(Public.ActivityPersonalityModel.getFactory());
+
+    /**
      * <code>repeated .HonorInfo Honors = 124;</code>
      */
     private final RepeatedMessage<Public.HonorInfo> honors = RepeatedMessage.newEmptyInstance(Public.HonorInfo.getFactory());
@@ -3103,11 +3108,79 @@ public final class PlayerData {
     }
 
     /**
+     * <code>repeated .ActivityPersonalityModel PersonalityModels = 120;</code>
+     * @return whether the personalityModels field is set
+     */
+    public boolean hasPersonalityModels() {
+      return (bitField1_ & 0x00010000) != 0;
+    }
+
+    /**
+     * <code>repeated .ActivityPersonalityModel PersonalityModels = 120;</code>
+     * @return this
+     */
+    public PlayerInfo clearPersonalityModels() {
+      bitField1_ &= ~0x00010000;
+      personalityModels.clear();
+      return this;
+    }
+
+    /**
+     * <code>repeated .ActivityPersonalityModel PersonalityModels = 120;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutablePersonalityModels()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public RepeatedMessage<Public.ActivityPersonalityModel> getPersonalityModels() {
+      return personalityModels;
+    }
+
+    /**
+     * <code>repeated .ActivityPersonalityModel PersonalityModels = 120;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public RepeatedMessage<Public.ActivityPersonalityModel> getMutablePersonalityModels() {
+      bitField1_ |= 0x00010000;
+      return personalityModels;
+    }
+
+    /**
+     * <code>repeated .ActivityPersonalityModel PersonalityModels = 120;</code>
+     * @param value the personalityModels to add
+     * @return this
+     */
+    public PlayerInfo addPersonalityModels(final Public.ActivityPersonalityModel value) {
+      bitField1_ |= 0x00010000;
+      personalityModels.add(value);
+      return this;
+    }
+
+    /**
+     * <code>repeated .ActivityPersonalityModel PersonalityModels = 120;</code>
+     * @param values the personalityModels to add
+     * @return this
+     */
+    public PlayerInfo addAllPersonalityModels(final Public.ActivityPersonalityModel... values) {
+      bitField1_ |= 0x00010000;
+      personalityModels.addAll(values);
+      return this;
+    }
+
+    /**
      * <code>repeated .HonorInfo Honors = 124;</code>
      * @return whether the honors field is set
      */
     public boolean hasHonors() {
-      return (bitField1_ & 0x00010000) != 0;
+      return (bitField1_ & 0x00020000) != 0;
     }
 
     /**
@@ -3115,7 +3188,7 @@ public final class PlayerData {
      * @return this
      */
     public PlayerInfo clearHonors() {
-      bitField1_ &= ~0x00010000;
+      bitField1_ &= ~0x00020000;
       honors.clear();
       return this;
     }
@@ -3144,7 +3217,7 @@ public final class PlayerData {
      * @return internal storage object for modifications
      */
     public RepeatedMessage<Public.HonorInfo> getMutableHonors() {
-      bitField1_ |= 0x00010000;
+      bitField1_ |= 0x00020000;
       return honors;
     }
 
@@ -3154,7 +3227,7 @@ public final class PlayerData {
      * @return this
      */
     public PlayerInfo addHonors(final Public.HonorInfo value) {
-      bitField1_ |= 0x00010000;
+      bitField1_ |= 0x00020000;
       honors.add(value);
       return this;
     }
@@ -3165,7 +3238,7 @@ public final class PlayerData {
      * @return this
      */
     public PlayerInfo addAllHonors(final Public.HonorInfo... values) {
-      bitField1_ |= 0x00010000;
+      bitField1_ |= 0x00020000;
       honors.addAll(values);
       return this;
     }
@@ -3226,6 +3299,7 @@ public final class PlayerData {
         tutorialLevels.copyFrom(other.tutorialLevels);
         assists.copyFrom(other.assists);
         activityHonors.copyFrom(other.activityHonors);
+        personalityModels.copyFrom(other.personalityModels);
         honors.copyFrom(other.honors);
       }
       return this;
@@ -3381,6 +3455,9 @@ public final class PlayerData {
       if (other.hasActivityHonors()) {
         getMutableActivityHonors().addAll(other.activityHonors);
       }
+      if (other.hasPersonalityModels()) {
+        getMutablePersonalityModels().addAll(other.personalityModels);
+      }
       if (other.hasHonors()) {
         getMutableHonors().addAll(other.honors);
       }
@@ -3443,6 +3520,7 @@ public final class PlayerData {
       tutorialLevels.clear();
       assists.clear();
       activityHonors.clear();
+      personalityModels.clear();
       honors.clear();
       return this;
     }
@@ -3492,6 +3570,7 @@ public final class PlayerData {
       tutorialLevels.clearQuick();
       assists.clearQuick();
       activityHonors.clearQuick();
+      personalityModels.clearQuick();
       honors.clearQuick();
       return this;
     }
@@ -3555,6 +3634,7 @@ public final class PlayerData {
         && (!hasTutorialLevels() || tutorialLevels.equals(other.tutorialLevels))
         && (!hasAssists() || assists.equals(other.assists))
         && (!hasActivityHonors() || activityHonors.equals(other.activityHonors))
+        && (!hasPersonalityModels() || personalityModels.equals(other.personalityModels))
         && (!hasHonors() || honors.equals(other.honors));
     }
 
@@ -3801,6 +3881,12 @@ public final class PlayerData {
         }
       }
       if ((bitField1_ & 0x00010000) != 0) {
+        for (int i = 0; i < personalityModels.length(); i++) {
+          output.writeRawLittleEndian16((short) 1986);
+          output.writeMessageNoTag(personalityModels.get(i));
+        }
+      }
+      if ((bitField1_ & 0x00020000) != 0) {
         for (int i = 0; i < honors.length(); i++) {
           output.writeRawLittleEndian16((short) 2018);
           output.writeMessageNoTag(honors.get(i));
@@ -3956,6 +4042,9 @@ public final class PlayerData {
         size += (2 * activityHonors.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(activityHonors);
       }
       if ((bitField1_ & 0x00010000) != 0) {
+        size += (2 * personalityModels.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(personalityModels);
+      }
+      if ((bitField1_ & 0x00020000) != 0) {
         size += (2 * honors.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(honors);
       }
       return size;
@@ -4378,6 +4467,14 @@ public final class PlayerData {
             // activityHonors
             tag = input.readRepeatedMessage(activityHonors, tag);
             bitField1_ |= 0x00008000;
+            if (tag != 962) {
+              break;
+            }
+          }
+          case 962: {
+            // personalityModels
+            tag = input.readRepeatedMessage(personalityModels, tag);
+            bitField1_ |= 0x00010000;
             if (tag != 994) {
               break;
             }
@@ -4385,7 +4482,7 @@ public final class PlayerData {
           case 994: {
             // honors
             tag = input.readRepeatedMessage(honors, tag);
-            bitField1_ |= 0x00010000;
+            bitField1_ |= 0x00020000;
             if (tag != 0) {
               break;
             }
@@ -4588,6 +4685,9 @@ public final class PlayerData {
         output.writeRepeatedMessage(FieldNames.activityHonors, activityHonors);
       }
       if ((bitField1_ & 0x00010000) != 0) {
+        output.writeRepeatedMessage(FieldNames.personalityModels, personalityModels);
+      }
+      if ((bitField1_ & 0x00020000) != 0) {
         output.writeRepeatedMessage(FieldNames.honors, honors);
       }
       output.endObject();
@@ -5128,11 +5228,22 @@ public final class PlayerData {
             }
             break;
           }
+          case 1297962584: {
+            if (input.isAtField(FieldNames.personalityModels)) {
+              if (!input.trySkipNullValue()) {
+                input.readRepeatedMessage(personalityModels);
+                bitField1_ |= 0x00010000;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
           case -2127770263: {
             if (input.isAtField(FieldNames.honors)) {
               if (!input.trySkipNullValue()) {
                 input.readRepeatedMessage(honors);
-                bitField1_ |= 0x00010000;
+                bitField1_ |= 0x00020000;
               }
             } else {
               input.skipUnknownField();
@@ -5286,6 +5397,8 @@ public final class PlayerData {
       static final FieldName assists = FieldName.forField("Assists");
 
       static final FieldName activityHonors = FieldName.forField("ActivityHonors");
+
+      static final FieldName personalityModels = FieldName.forField("PersonalityModels");
 
       static final FieldName honors = FieldName.forField("Honors");
     }

@@ -148,12 +148,11 @@ public enum QuestCondition {
         }
     }
 
-    QuestCondition(int value) {
+    private QuestCondition(int value) {
         this.value = value;
     }
 
     public static QuestCondition getByValue(int value) {
         return map.get(value);
     }
-
 }

@@ -688,6 +688,12 @@ public class NetMsgId {
     public static final int player_last_read_update_req = 8325;
     public static final int player_last_read_update_succeed_ack = 8326;
     public static final int player_last_read_update_failed_ack = 8327;
+    public static final int activity_history_story_apply_req = 8328;
+    public static final int activity_history_story_apply_succeed_ack = 8329;
+    public static final int activity_history_story_apply_failed_ack = 8330;
+    public static final int activity_history_story_settle_req = 8331;
+    public static final int activity_history_story_settle_succeed_ack = 8332;
+    public static final int activity_history_story_settle_failed_ack = 8333;
     public static final int activity_penguin_card_level_settle_req = 8401;
     public static final int activity_penguin_card_level_settle_succeed_ack = 8402;
     public static final int activity_penguin_card_level_settle_failed_ack = 8403;
